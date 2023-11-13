@@ -29,13 +29,19 @@ func ReadDir(path string) (files []File, err error) {
 	return
 }
 
+func FileDisplay(files []File) {
+	for _, f := range files {
+		fmt.Printf("%s\t%s\n", f.Name, map[bool]string{true: "DIR", false: "FILE"}[f.IsDir])
+	}
+}
+
 func main() {
-	_, e := ReadDir(".")
+	files, e := ReadDir(".")
 	if e != nil {
 		err := fmt.Errorf("fatal: %w", e)
 		log.Fatal().Err(err).Msg("")
 		os.Exit(1)
 	}
 
-	fmt.Printf("Success!")
+	FileDisplay(files)
 }
