@@ -2,8 +2,10 @@ package main
 
 import (
 	"fmt"
-	"github.com/rs/zerolog/log"
 	"os"
+	"path/filepath"
+
+	"github.com/rs/zerolog/log"
 )
 
 type File struct {
@@ -29,19 +31,42 @@ func ReadDir(path string) (files []File, err error) {
 	return
 }
 
-func FileDisplay(files []File) {
-	for _, f := range files {
-		fmt.Printf("%s\t%s\n", f.Name, map[bool]string{true: "DIR", false: "FILE"}[f.IsDir])
+func SearchFile(path string, fileName string) (err error) {
+	files, e := ReadDir(path)
+	if e != nil {
+		err = fmt.Errorf("failed to read directory: %w", e)
+		log.Error().Err(err).Msg("")
+		return
 	}
+
+	for _, file := range files {
+		if file.Name == fileName {
+			fmt.Printf("Found file at: %s\n", filepath.Join(path, fileName))
+			return
+		}
+
+		// recursive search
+		if file.IsDir {
+			if e := SearchFile(filepath.Join(path, file.Name), fileName); e != nil {
+				err = e
+				return
+			}
+		}
+	}
+
+	return
 }
 
 func main() {
-	files, e := ReadDir(".")
-	if e != nil {
-		err := fmt.Errorf("fatal: %w", e)
-		log.Fatal().Err(err).Msg("")
+	if len(os.Args) < 3 {
+		log.Error().Msg("Please provide a path and file name")
 		os.Exit(1)
 	}
 
-	FileDisplay(files)
+	filePath := os.Args[1]
+	fileName := os.Args[2]
+	if e := SearchFile(filePath, fileName); e != nil {
+		err := fmt.Errorf("failed to fetch file %s, at %s: %w", fileName, filePath, e)
+		log.Error().Err(err).Msg("")
+	}
 }
