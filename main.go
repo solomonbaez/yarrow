@@ -14,10 +14,16 @@ type File struct {
 }
 
 func ReadDir(path string) (files []*File) {
-	content, e := os.ReadDir(path)
-	if e != nil && e.Error() != "operation not permitted" {
-		err := fmt.Errorf("error reading directory: %w", e)
-		log.Error().Err(err).Msg("")
+	// unreachable path early exit
+	dir, e := os.Open(path)
+	if e != nil {
+		return
+	}
+	defer dir.Close()
+
+	content, e := dir.Readdir(-1)
+	if e != nil {
+		return
 	}
 
 	for _, file := range content {
@@ -40,34 +46,26 @@ func SearchFile(path string, fileName string) (err error) {
 		}
 	}
 
-	// unreachable path early exit
-	info, e := os.Stat(path)
-	if e != nil {
-		log.Error().Err(e).Msg("")
-		return
-	}
+	var subDir string
+	files := ReadDir(path)
+	for _, file := range files {
+		if file.Name == fileName {
+			fmt.Printf("Found file at: %s\n", filepath.Join(path, fileName))
+			return
+		}
 
-	if info.Mode().Perm()&(1<<(uint(7))) == 1 {
-		var subDir string
-		files := ReadDir(path)
-		for _, file := range files {
-			if file.Name == fileName {
-				fmt.Printf("Found file at: %s\n", filepath.Join(path, fileName))
-				return
-			}
-
-			// recursive search
-			if file.IsDir {
-				// for clarity
-				subDir = file.Name
-				SearchFile(filepath.Join(path, subDir), fileName)
-			}
+		// recursive search
+		if file.IsDir {
+			// for clarity
+			subDir = file.Name
+			SearchFile(filepath.Join(path, subDir), fileName)
 		}
 	}
 
 	return
 }
 
+// TODO implement "near" and "far" commands in place of directory arg
 func main() {
 	if len(os.Args) < 2 {
 		log.Error().Msg("Please provide a file name")
