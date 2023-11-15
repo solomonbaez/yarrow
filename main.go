@@ -1,7 +1,6 @@
 package main
 
 import (
-	"errors"
 	"fmt"
 	"os"
 	"path/filepath"
@@ -16,7 +15,7 @@ type File struct {
 
 func ReadDir(path string) (files []*File) {
 	content, e := os.ReadDir(path)
-	if e != nil {
+	if e != nil && e.Error() != "operation not permitted" {
 		err := fmt.Errorf("error reading directory: %w", e)
 		log.Error().Err(err).Msg("")
 	}
@@ -42,12 +41,6 @@ func SearchFile(path string, fileName string) (err error) {
 	}
 
 	files := ReadDir(path)
-	if files == nil {
-		err = errors.New("could not find file")
-		log.Error().Err(err).Msg("")
-		return
-	}
-
 	for _, file := range files {
 		if file.Name == fileName {
 			fmt.Printf("Found file at: %s\n", filepath.Join(path, fileName))
@@ -56,10 +49,7 @@ func SearchFile(path string, fileName string) (err error) {
 
 		// recursive search
 		if file.IsDir {
-			if e := SearchFile(filepath.Join(path, file.Name), fileName); e != nil {
-				err = e
-				return
-			}
+			SearchFile(filepath.Join(path, file.Name), fileName)
 		}
 	}
 
