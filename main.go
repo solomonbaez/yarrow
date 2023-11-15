@@ -13,6 +13,7 @@ type File struct {
 	IsDir bool
 }
 
+// TODO add an initializer .txt generator to cache unreachable files -> tabulation
 func ReadDir(path string) (files []*File) {
 	// unreachable path early exit
 	dir, e := os.Open(path)
@@ -66,12 +67,24 @@ func SearchFile(path string, fileName string) (err error) {
 }
 
 // TODO implement "near" and "far" commands in place of directory arg
+// TODO implement conditional .txt generation of unreachable directories -> tabulation
 func main() {
+	var fileName string
 	if len(os.Args) < 2 {
 		log.Error().Msg("Please provide a file name")
 		os.Exit(1)
+	} else if os.Args[1] == "init" {
+		// base state, assumes that all commonly searched directories will be around this level
+		fileName = "main.go"
+		_, e := os.Create("cache.txt")
+		if e != nil {
+			err := fmt.Errorf("failed to create cache.txt: %w", e)
+			log.Error().Err(err).Msg("")
+		}
+		log.Info().Msg("initialized empty cache.txt, scanning...")
+	} else {
+		fileName = os.Args[1]
 	}
-	fileName := os.Args[1]
 
 	var filePath string
 	if len(os.Args) > 2 {
