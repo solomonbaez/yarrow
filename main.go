@@ -40,16 +40,28 @@ func SearchFile(path string, fileName string) (err error) {
 		}
 	}
 
-	files := ReadDir(path)
-	for _, file := range files {
-		if file.Name == fileName {
-			fmt.Printf("Found file at: %s\n", filepath.Join(path, fileName))
-			return
-		}
+	// unreachable path early exit
+	info, e := os.Stat(path)
+	if e != nil {
+		log.Error().Err(e).Msg("")
+		return
+	}
 
-		// recursive search
-		if file.IsDir {
-			SearchFile(filepath.Join(path, file.Name), fileName)
+	if info.Mode().Perm()&(1<<(uint(7))) == 1 {
+		var subDir string
+		files := ReadDir(path)
+		for _, file := range files {
+			if file.Name == fileName {
+				fmt.Printf("Found file at: %s\n", filepath.Join(path, fileName))
+				return
+			}
+
+			// recursive search
+			if file.IsDir {
+				// for clarity
+				subDir = file.Name
+				SearchFile(filepath.Join(path, subDir), fileName)
+			}
 		}
 	}
 
