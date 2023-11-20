@@ -14,9 +14,8 @@ type File struct {
 	IsDir bool
 }
 
-// TODO add an initializer .txt generator to cache unreachable files -> tabulation
 func ReadDir(path string) (files []*File) {
-	// unreachable path early exit
+	// cache previously unknown unreachable paths
 	dir, e := os.Open(path)
 	if e != nil {
 		// attempt to cache unreachable path
@@ -61,6 +60,10 @@ func SearchFile(path string, fileName string) (err error) {
 		}
 	}
 
+	if _, ok := cache[path]; ok {
+		return
+	}
+
 	var subDir string
 	files := ReadDir(path)
 	for _, file := range files {
@@ -79,6 +82,8 @@ func SearchFile(path string, fileName string) (err error) {
 
 	return
 }
+
+var cache = make(map[string]struct{})
 
 // TODO implement "near" and "far" commands in place of directory arg
 // TODO implement conditional .txt generation of unreachable directories -> tabulation
@@ -107,15 +112,10 @@ func main() {
 			os.Exit(1)
 		}
 
-		cacheString := string(cacheBytes)
-		cachePaths := strings.Split(cacheString, "\n")
-
-		// hashset
-		cache := make(map[string]struct{})
+		cachePaths := strings.Split(string(cacheBytes), "\n")
 		for _, path := range cachePaths {
 			cache[path] = struct{}{}
 		}
-		fmt.Printf("%v", cache)
 	}
 
 	var filePath string
