@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"os"
 	"path/filepath"
+	"strings"
 
 	"github.com/rs/zerolog/log"
 )
@@ -21,13 +22,13 @@ func ReadDir(path string) (files []*File) {
 		// attempt to cache unreachable path
 		cache, e := os.OpenFile("cache.txt", os.O_APPEND|os.O_WRONLY, 0644)
 		if e != nil {
-			err := fmt.Errorf("Failed to fetch cache: %w", e)
+			err := fmt.Errorf("failed to fetch cache: %w", e)
 			log.Error().Err(err).Msg("")
 		}
 		defer cache.Close()
 
 		if _, e := cache.WriteString(path + "\n"); e != nil {
-			err := fmt.Errorf("Failed to write to cache: %w", e)
+			err := fmt.Errorf("failed to write to cache: %w", e)
 			log.Error().Err(err).Msg("")
 		}
 
@@ -84,8 +85,9 @@ func SearchFile(path string, fileName string) (err error) {
 func main() {
 	var fileName string
 	if len(os.Args) < 2 {
-		log.Error().Msg("Please provide a file name")
+		log.Error().Msg("please provide a file name")
 		os.Exit(1)
+
 	} else if os.Args[1] == "init" {
 		// base state, assumes that all commonly searched directories will be around this level
 		fileName = "main.go"
@@ -95,8 +97,25 @@ func main() {
 			log.Error().Err(err).Msg("")
 		}
 		log.Info().Msg("initialized empty cache.txt, scanning...")
+
 	} else {
 		fileName = os.Args[1]
+		cacheBytes, e := os.ReadFile("cache.txt")
+		if e != nil {
+			err := fmt.Errorf("failed to fetch cache: %w", e)
+			log.Error().Err(err).Msg("")
+			os.Exit(1)
+		}
+
+		cacheString := string(cacheBytes)
+		cachePaths := strings.Split(cacheString, "\n")
+
+		// hashset
+		cache := make(map[string]struct{})
+		for _, path := range cachePaths {
+			cache[path] = struct{}{}
+		}
+		fmt.Printf("%v", cache)
 	}
 
 	var filePath string
