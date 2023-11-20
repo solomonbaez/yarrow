@@ -1,0 +1,158 @@
+/Users/solomon/Pictures/Photos Library.photoslibrary
+/Users/solomon/Library/Application Support/CallHistoryTransactions
+/Users/solomon/Library/Application Support/CloudDocs/session/db
+/Users/solomon/Library/Application Support/com.apple.sharedfilelist
+/Users/solomon/Library/Application Support/Knowledge
+/Users/solomon/Library/Application Support/com.apple.TCC
+/Users/solomon/Library/Application Support/FileProvider
+/Users/solomon/Library/Application Support/AddressBook
+/Users/solomon/Library/Application Support/FaceTime
+/Users/solomon/Library/Application Support/com.apple.avfoundation/Frecents
+/Users/solomon/Library/Application Support/CallHistoryDB
+/Users/solomon/Library/Assistant/SiriVocabulary
+/Users/solomon/Library/Daemon Containers
+/Users/solomon/Library/Autosave Information
+/Users/solomon/Library/IdentityServices
+/Users/solomon/Library/Calendars
+/Users/solomon/Library/Messages
+/Users/solomon/Library/HomeKit
+/Users/solomon/Library/Sharing
+/Users/solomon/Library/com.apple.aiml.instrumentation
+/Users/solomon/Library/Mail
+/Users/solomon/Library/Trial
+/Users/solomon/Library/AppleMediaServices
+/Users/solomon/Library/DuetExpertCenter
+/Users/solomon/Library/Accounts
+/Users/solomon/Library/Safari
+/Users/solomon/Library/Biome
+/Users/solomon/Library/IntelligencePlatform
+/Users/solomon/Library/Shortcuts
+/Users/solomon/Library/Mobile Documents
+/Users/solomon/Library/Suggestions
+/Users/solomon/Library/Weather
+/Users/solomon/Library/Group Containers/group.com.apple.stocks-news
+/Users/solomon/Library/Group Containers/group.com.apple.photolibraryd.private
+/Users/solomon/Library/Group Containers/group.com.apple.accessibility.voicebanking
+/Users/solomon/Library/Group Containers/group.com.apple.stocks
+/Users/solomon/Library/Group Containers/group.com.apple.secure-control-center-preferences
+/Users/solomon/Library/Group Containers/group.com.apple.chronod
+/Users/solomon/Library/Group Containers/com.apple.MailPersonaStorage
+/Users/solomon/Library/Group Containers/group.com.apple.newsd
+/Users/solomon/Library/Group Containers/group.com.apple.tips
+/Users/solomon/Library/Group Containers/group.com.apple.ManagedSettings
+/Users/solomon/Library/Group Containers/group.com.apple.news
+/Users/solomon/Library/Group Containers/group.com.apple.weather
+/Users/solomon/Library/Group Containers/com.apple.systempreferences.cache
+/Users/solomon/Library/Group Containers/group.com.apple.notes
+/Users/solomon/Library/Group Containers/group.com.apple.tipsnext
+/Users/solomon/Library/Group Containers/group.com.apple.reminders
+/Users/solomon/Library/Group Containers/group.com.apple.mail
+/Users/solomon/Library/Group Containers/com.apple.bird
+/Users/solomon/Library/Group Containers/group.com.apple.DeviceActivity
+/Users/solomon/Library/Group Containers/group.com.apple.iCloudDrive
+/Users/solomon/Library/Group Containers/com.apple.PreviewLegacySignaturesConversion
+/Users/solomon/Library/Group Containers/group.com.apple.Photos.PhotosFileProvider
+/Users/solomon/Library/Group Containers/group.com.apple.PegasusConfiguration
+/Users/solomon/Library/Group Containers/com.apple.MessagesLegacyTransferArchive
+/Users/solomon/Library/Containers/com.apple.CloudPhotosConfiguration/Data
+/Users/solomon/Library/Containers/com.apple.PressAndHold/Data
+/Users/solomon/Library/Containers/com.apple.VoiceMemos
+/Users/solomon/Library/Containers/com.apple.ax.KonaTTSSupport.KonaSynthesizer/Data
+/Users/solomon/Library/Containers/com.apple.archiveutility
+/Users/solomon/Library/Containers/com.apple.ScreenTimeAgent/Data
+/Users/solomon/Library/Containers/com.apple.speech.MacinTalkFramework.WardaSynthesizer.x86-64/Data
+/Users/solomon/Library/Containers/com.apple.weather.widget/Data
+/Users/solomon/Library/Containers/com.apple.Photos.PhotosFileProvider/Data
+/Users/solomon/Library/Containers/com.apple.quicklook.QuickLookUIService/Data
+/Users/solomon/Library/Containers/com.apple.iCal.CalendarWidgetExtension/Data
+/Users/solomon/Library/Containers/com.apple.photolibraryd/Data
+/Users/solomon/Library/Containers/com.apple.wallpaper.extension.image/Data
+/Users/solomon/Library/Containers/com.apple.siri.media-indexer/Data
+/Users/solomon/Library/Containers/com.apple.speech.MacinTalkFramework.WardaSynthesizer.arm64/Data
+/Users/solomon/Library/Containers/com.apple.StorageManagement.MessagesHelper/Data
+/Users/solomon/Library/Containers/com.apple.BKAgentService/Data
+/Users/solomon/Library/Containers/com.apple.tonelibraryd/Data
+/Users/solomon/Library/Containers/com.apple.Maps/Data/Maps
+/Users/solomon/Library/Containers/com.apple.AMPDeviceDiscoveryAgent/Data
+/Users/solomon/Library/Containers/com.apple.systempreferences.AppleIDSettings/Data
+/Users/solomon/Library/Containers/com.apple.GamePolicyMenuExtraService/Data
+/Users/solomon/Library/Containers/com.apple.podcasts.MacPodcastsStorageExtension/Data
+/Users/solomon/Library/Containers/com.apple.Home
+/Users/solomon/Library/Containers/com.apple.Safari
+/Users/solomon/Library/Containers/com.apple.CloudDocsDaemon.StorageManagement/Data
+/Users/solomon/Library/Containers/com.apple.Safari.CacheDeleteExtension/Data
+/Users/solomon/Library/Containers/com.apple.AMPArtworkAgent/Data
+/Users/solomon/Library/Containers/com.apple.FollowUpSettings.FollowUpSettingsExtension/Data
+/Users/solomon/Library/Containers/com.apple.iBooksX.DiskSpaceEfficiency/Data
+/Users/solomon/Library/Containers/com.apple.messages.StorageManagementExtension/Data
+/Users/solomon/Library/Containers/com.apple.clock.WorldClockWidget/Data
+/Users/solomon/Library/Containers/com.apple.news.widget/Data
+/Users/solomon/Library/Containers/com.apple.ScreenTimeWidgetApplication.ScreenTimeWidgetExtension/Data
+/Users/solomon/Library/Containers/com.apple.STMExtension.OtherUsers/Data
+/Users/solomon/Library/Containers/com.apple.speech.MacinTalkFramework.MacinTalkAUSP/Data
+/Users/solomon/Library/Containers/com.apple.photoanalysisd/Data
+/Users/solomon/Library/Containers/com.apple.notificationcenterui/Data
+/Users/solomon/Library/Containers/com.apple.CloudDocs.MobileDocumentsFileProvider
+/Users/solomon/Library/Containers/com.apple.TV.TVStorageExtension/Data
+/Users/solomon/Library/Containers/com.apple.mail
+/Users/solomon/Library/Containers/com.apple.MailShortcutsExtension/Data
+/Users/solomon/Library/Containers/com.apple.spotlight.CSExattrCryptoService/Data
+/Users/solomon/Library/Containers/com.apple.MobileSMS
+/Users/solomon/Library/Containers/com.apple.Music.MusicCacheExtension/Data
+/Users/solomon/Library/Containers/com.apple.StorageManagement.CloudStorageHelper/Data
+/Users/solomon/Library/Containers/com.apple.calendar.CalendarFocusConfigurationExtension/Data
+/Users/solomon/Library/Containers/com.apple.Notes
+/Users/solomon/Library/Containers/com.apple.STMExtension.Trash/Data
+/Users/solomon/Library/Containers/com.apple.MailCacheDelete/Data
+/Users/solomon/Library/Containers/com.apple.ScreenSaver.Drift/Data
+/Users/solomon/Library/Containers/com.apple.STMExtension.iOSFiles/Data
+/Users/solomon/Library/Containers/com.apple.STMExtension.Applications/Data
+/Users/solomon/Library/Containers/com.apple.Music.MusicStorageExtension/Data
+/Users/solomon/Library/Containers/com.apple.Photos.StorageManagementExtension/Data
+/Users/solomon/Library/Containers/com.apple.geod/Data
+/Users/solomon/Library/Containers/com.apple.news
+/Users/solomon/Library/Containers/com.apple.TV.TVCacheExtension/Data
+/Users/solomon/Library/Containers/com.apple.STMExtension.Mail/Data
+/Users/solomon/Library/Containers/com.apple.texttospeech.SiriAUSP/Data
+/Users/solomon/Library/Containers/com.apple.STMExtension.Developer/Data
+/Users/solomon/Library/Containers/com.apple.routined/Data
+/Users/solomon/Library/Containers/com.apple.corerecents.recentsd/Data
+/Users/solomon/Library/Containers/com.apple.STMExtension.GarageBand/Data
+/Users/solomon/Library/Containers/com.apple.stocks.widget/Data
+/Users/solomon/Library/Containers/com.apple.Preview/Data
+/Users/solomon/Library/Containers/com.apple.UsageTrackingAgent/Data
+/Users/solomon/Library/Containers/com.apple.CoreRoutine.helperservice/Data
+/Users/solomon/Library/Containers/com.apple.stocks
+/Users/solomon/Library/Containers/com.apple.Safari.SafariLinkExtension/Data
+/Users/solomon/Library/Containers/com.apple.quicklook.ui.helper/Data
+/Users/solomon/Library/Containers/com.apple.ax.MauiTTSSupport.MauiAUSP/Data
+/Users/solomon/Library/Containers/com.apple.AirPlayUIAgent/Data
+/Users/solomon/Library/Containers/com.apple.voicebankingd/Data
+/Users/solomon/Library/Containers/com.apple.CloudDocs.iCloudDriveFileProvider/Data
+/Users/solomon/Library/Containers/com.apple.mediaanalysisd/Data
+/Users/solomon/Library/Containers/com.apple.OSDUIHelper/Data
+/Users/solomon/Library/Containers/com.apple.MobileSMS.MessagesActionExtension/Data
+/Users/solomon/Library/Containers/com.apple.Family/Data
+/Users/solomon/Library/ContainerManager
+/Users/solomon/Library/PersonalizationPortrait
+/Users/solomon/Library/Photos/Libraries/Syndication.photoslibrary
+/Users/solomon/Library/Metadata/CoreSpotlight
+/Users/solomon/Library/Metadata/com.apple.IntelligentSuggestions
+/Users/solomon/Library/Reminders
+/Users/solomon/Library/Cookies
+/Users/solomon/Library/com.apple.bluetooth.services.cloud/CachedRecords/SoundProfileAsset
+/Users/solomon/Library/CoreFollowUp
+/Users/solomon/Library/StatusKit
+/Users/solomon/Library/DoNotDisturb
+/Users/solomon/Library/Caches/com.apple.HomeKit
+/Users/solomon/Library/Caches/CloudKit
+/Users/solomon/Library/Caches/com.apple.Safari
+/Users/solomon/Library/Caches/com.apple.findmy.fmfcore
+/Users/solomon/Library/Caches/com.apple.containermanagerd
+/Users/solomon/Library/Caches/com.apple.Safari.SafeBrowsing
+/Users/solomon/Library/Caches/FamilyCircle
+/Users/solomon/Library/Caches/com.apple.homed
+/Users/solomon/Library/Caches/com.apple.findmy.fmipcore
+/Users/solomon/Library/Caches/com.apple.ap.adprivacyd
+/Users/solomon/.Trash
+/Users/solomon/Downloads

@@ -18,6 +18,19 @@ func ReadDir(path string) (files []*File) {
 	// unreachable path early exit
 	dir, e := os.Open(path)
 	if e != nil {
+		// attempt to cache unreachable path
+		cache, e := os.OpenFile("cache.txt", os.O_APPEND|os.O_WRONLY, 0644)
+		if e != nil {
+			err := fmt.Errorf("Failed to fetch cache: %w", e)
+			log.Error().Err(err).Msg("")
+		}
+		defer cache.Close()
+
+		if _, e := cache.WriteString(path + "\n"); e != nil {
+			err := fmt.Errorf("Failed to write to cache: %w", e)
+			log.Error().Err(err).Msg("")
+		}
+
 		return
 	}
 	defer dir.Close()
